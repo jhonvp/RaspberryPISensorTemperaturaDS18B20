@@ -17,10 +17,10 @@ def configuracion():
 
 def leer():
 #	global ds18b20
-#	se ubica el archivo donde se almacena la información
+#	se ubica el archivo donde se almacena la informacion
 # recolectada por el sensor
 	location = '/sys/bus/w1/devices/' + ds18b20 + '/w1_slave'
-#Se abre el archivo donde esta almacenada la información
+#Se abre el archivo donde esta almacenada la informacion
 	tfile = open(location)
 	text = tfile.read()
 	tfile.close()
@@ -37,7 +37,7 @@ def leer():
 def cicloprincipal():
 	while True:
 		if leer() != None:
-			print "La temperatura actueal es : %0.3f C" % read()
+			print "La temperatura actual es : %0.3f C" % leer()
 
 def detener():
 	pass
